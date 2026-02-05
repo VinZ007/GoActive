@@ -4,16 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="Logo">GoActive <img src="logo.png" alt=""></div>
-    <nav>
-        <ul class="nav-links">
-            <li><a onclick="showSection('about')">О нас</a></li>
-            <li><a onclick="showSection('tours')">Туры</a></li>
-            <li><a onclick="showSection('gallery')">Галерея</a></li>
-            <li><a onclick="showSection('reviews')">Отзывы</a></li>
-        </ul>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="showSection('hero')">GoActive</div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('about')">О нас</a></li>
+                <li><a onclick="showSection('tours')">Туры</a></li>
+                <li><a onclick="showSection('gallery')">Галерея</a></li>
+                <li><a onclick="showSection('reviews')">Отзывы</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section"  style="display: none;">
+        <div class="hero-content">
+            <h1>GOACTIVE</h1>
+            <p>Ваши приключения начинаются здесь</p>
+            <button class="cta-button" onclick="showSection('tours')">Выбрать тур</button>
+        </div>
+    </section>
+
+    <section class="about" style="display: none;">
+        <div class="main">
+            <div class="logopic">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="descript">
+                <h1>GoActive</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor officia vitae, voluptatem tempore modi accusantium eaque animi repellendus repellat ratione ipsam, aspernatur accusamus, eligendi aliquid. Enim, sit deserunt nesciunt quisquam commodi dolore voluptate laboriosam labore, doloribus soluta cupiditate vitae sed, mollitia voluptates totam natus! Rerum modi pariatur quaerat iste architecto obcaecati. Cumque, laboriosam!</p>
+            </div>
+
+        </div>
+        <div class="adress">
+            <h2>Штаты компании</h2>
+            <h3></h3>
+
+        </div>
+        <div class="contacts">
+
+        </div>
+    </section>
+    <section class="tours" >
+        <h1 class="sec-title">Tours</h1>
+        
+            
+        <div class="filters">
+            <div class="filter-group">
+                <label>Дата</label>
+                <input type="date" id="dateFilter">
+            </div>
+            <div class="filter-group">
+                <label>Вид активности</label>
+                <select id="activityFilter">
+                    <option value="все">Все</option>
+                    <option value="горы">Катания в горах</option>
+                    <option value="вода">Купания в экзотических местах</option>
+                    <option value="вело">Велопрогулки</option>
+                    <option value="пеший">Пешие маршруты</option>
+                </select>
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active" onclick="setView('grid')" title="Сетка">⊞</button>
+                <button class="view-btn" onclick="setView('list')" title="Список">☰</button>
+            </div>
+        </div>
+
+        <div class="tours-container" id="toursCont"></div>
+        
+        
+        
+
+    </section>
+    <section class="gallery" style="display: none;">
+
+    </section>
+    <section class="reviews" style="display: none;">
+
+    </section>
 </body>
 </html>
